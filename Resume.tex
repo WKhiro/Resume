@@ -1,4 +1,5 @@
 % Wesley Kok
+% Last Updated: 6/14/2020
 
 \documentclass{article}
 
@@ -15,14 +16,14 @@
 \definecolor{DarkMidnightBlue}{rgb}{0.0, 0.2, 0.4}
 \definecolor{Carmine}{rgb}{0.59, 0.0, 0.09}
 
-\renewcommand{\familydefault}{\sfdefault}
-
+% Changing default parameters of sections
 \titleformat{\section}
 {\huge\bf\color{DarkMidnightBlue}}
 {}
 {0em}
 {}
 
+% Runin allows text in the same line as subsection title
 \titleformat{\subsection}[runin]
 {\Large}
 {}
@@ -42,13 +43,17 @@
 
 }
 
+% Sets font family to Sans-serif
+\renewcommand{\familydefault}{\sfdefault}
+
+
+%% BEGINNING OF ACTUAL RESUME %%
 \begin{document}
 
 \author{Wesley Kok}
-\maketitle
-\thispagestyle{empty} % Removes the page number
-
-\large
+\maketitle 				% All my personal information
+\thispagestyle{empty} 	% Removes the page number
+\large 					% Default font size
 
 \section{Education}
 
@@ -76,10 +81,10 @@
 \end{itemize}
 \vspace{1.5em}
 
-\setlength{\columnsep}{1.5cm} % Separation between columns
-\columnratio{0.5} % Size of column
-\setlength{\columnseprule}{0.2pt} % Vertical bar
-\begin{paracol}{2} % Creates two columns of text
+\setlength{\columnsep}{1.5cm} 		% Separation between columns
+\columnratio{0.5} 					% Size of column
+\setlength{\columnseprule}{0.2pt} 	% Vertical bar
+\begin{paracol}{2} 					% Creates two columns of text
 
 \vspace{-2em}
 \section{Projects}
