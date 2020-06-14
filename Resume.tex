@@ -4,7 +4,12 @@
 \usepackage{titling}
 \usepackage{hyperref}
 \usepackage{fontawesome}
+\usepackage{paracol}
+\usepackage[dvipsnames]{xcolor} %Access to aquamarine
 \usepackage[margin=0.5in]{geometry}
+
+\setlength{\columnsep}{2.5cm}
+%\setlength\parindent{0pt} % No indent for the whole doc
 
 \titleformat{\section}
 {\huge\bf}
@@ -13,20 +18,20 @@
 {}
 
 \titleformat{\subsection}[runin]
-{\large\bf}
+{}
 {}
 {0em}
 {}
 
 \renewcommand{\maketitle}{
+\noindent
+{\huge\bf\theauthor} 
 
-{\noindent\huge\bf\theauthor} 
+\vspace{-1em}\hfill{\large\bf (669) 247-8121}
 
-\vspace{-1em}\hfill\large\bf (669) 247-8121
+{\Huge \href{https://github.com/WKhiro}{\faGithub} \href{https://www.linkedin.com/in/wesley-kok/}{\color{Aquamarine}\faLinkedin}}
 
-{\noindent \Huge \href{https://github.com/WKhiro}{\faGithub} \href{https://www.linkedin.com/in/wesley-kok/}{\faLinkedin}}
-
-\vspace{-1.5em} \hfill \large \bf wesleykok@hotmail.com
+\vspace{-1.5em} \hfill {\large \bf wesleykok@hotmail.com}
 
 }
 
@@ -36,12 +41,58 @@
 \author{Wesley Kok}
 
 \maketitle
+\thispagestyle{empty} % Removes the page number
 
 \section{Education}
-\subsection{University of California, San Diego} \it \quad San Diego, CA \hfill June 2020
-
+\subsection{University of California, San Diego} {\it \quad San Diego, CA} \hfill September 2018 - June 2020
+\begin{itemize}
+\item Bachelor of Science in Computer Science, 3.6 GPA
+\item Provost's Honors
+\end{itemize}
 \section{Experience}
-\subsection{UserTesting - Applicant Screener} \it \quad Mountain View, CA \hfill December 2019 - present
+\subsection{UserTesting - Independent Contractor} {\it \quad Mountain View, CA} \hfill December 2019 - present
+\begin{itemize}
+\item Applicant Screener
+\end{itemize}
+
+\subsection{Pactech - Software Engineer Intern} {\it \quad San Jose, CA} \hfill June 2019 - September 2019
+\begin{itemize}
+\item Helped design a mix-and-match cable parts web page using Bootstrap framework; generates custom cable codes based on the selected parts of the cable
+\item Refactored company website's HTML codebase to remove 400+ lines of boilerplate code
+\end{itemize}
+
+\begin{paracol}{2}
+\section{Projects}
+\subsection{CineScope} \hfill
+
+Web application for aggregating movies ratings and reviews
+\begin{itemize}
+\item Built web application with React, Node.js, and Firebase in team of ten
+\item Implemented data pagination for queried movie results
+\end{itemize}
+
+\subsection{Wyvern} \hfill
+
+Mobile game app that runs in browser and on Android devices
+\begin{itemize}
+\item Written in JavaScript using Phaser framework
+\item Ported over to Android Studio using Apache Cordova
+\end{itemize}
+\switchcolumn
+\section{Skills}
+\subsection{Languages} \hfill
+	
+	JavaScript, Python, C++, HTML/CSS, R
+	
+\subsection{Technologies} \hfill
+
+	Linux, Android Studio, React, Node.js, LaTeX, Git
+\section{Relevant Coursework}
+\subsection{CSE 101: Algorithms} \hfill
+\subsection{CSE 120: Operating Systems} \hfill
+\subsection{CSE 127: Computer Security} \hfill
+\subsection{CSE 150: Introduction to AI: Probabilistic Reasoning and Decision Making} \hfill
+\end{paracol}
 
 
 \end{document}
