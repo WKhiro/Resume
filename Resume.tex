@@ -1,11 +1,12 @@
 % Wesley Kok
-% Last Updated: 6/14/2020
+% Last Updated: 8/8/2021
 
 \documentclass{article}
 
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{hyperref}	
+\usepackage{fontspec}
 \usepackage{fontawesome}
 \usepackage{paracol}
 \usepackage[dvipsnames]{xcolor}
@@ -15,10 +16,13 @@
 
 \definecolor{DarkMidnightBlue}{rgb}{0.0, 0.2, 0.4}
 \definecolor{Carmine}{rgb}{0.59, 0.0, 0.09}
+\definecolor{Black}{rgb}{0.0, 0.0, 0.0}
+\definecolor{LinkedInBlue}{rgb}{0.16, 0.4, 0.7}
+
 
 % Changing default parameters of sections
 \titleformat{\section}
-{\huge\bf\color{DarkMidnightBlue}}
+{\Large\bf\color{DarkMidnightBlue}}
 {}
 {0em}
 {}
@@ -33,130 +37,115 @@
 % Header
 \renewcommand{\maketitle}
 {
+\vspace{-1em}
+{\hfill\large\bf (669) 247-8121}
+
+\vspace{-2em}
 {\noindent\fontsize{40pt}{0pt}\selectfont\bf\color{DarkMidnightBlue} \theauthor} 
 
-{\vspace{-1em}\hfill\large\bf (669) 247-8121}
-
-{\noindent\Huge \href{https://github.com/WKhiro}{\faGithub} \href{https://www.linkedin.com/in/wesley-kok/}{\color{Aquamarine}\faLinkedinSquare}\enspace\large\bf \href{https://wkhiro.github.io/}{\color{NavyBlue} wkhiro.github.io}}
-
-{\vspace{-1.5em}\hfill\large\bf wesleykok@hotmail.com}
+\vspace{-1.5em}
+{\hfill\large\bf wesleykkok@gmail.com}
 
 }
 
 % Sets font family to Sans-serif
-\renewcommand{\familydefault}{\sfdefault}
+\setmainfont{Calibri}
 
 
 %% BEGINNING OF ACTUAL RESUME %%
 \begin{document}
 
 \author{Wesley Kok}
-\maketitle 		% All my personal information
-\thispagestyle{empty} 	% Removes the page number
-\large 			% Default font size
-
-\section{Education}
+\maketitle 					% All my personal information
+\thispagestyle{empty} 		% Removes the page number
+\large 						% Default font size
+\setlength\parindent{0pt}	% Set noindent on the entire document
 
 \vspace{-0.5em}
-\subsection{University of California, San Diego}\quad{\it San Diego, CA}\hfill {\color{Carmine}September 2018 - June 2020}
+\section{Education}
+\vspace{-1.5em}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{-0.5em}
+\subsection{University of California, San Diego}\hfill {\color{NavyBlue}September 2018 - June 2020\\ 
+{\color{Black}\it B.S. in Computer Science, 3.6 GPA}}
+
+\vspace{-0.5em}
+\section{Experience}
+\vspace{-1.5em}
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{-0.5em}
+\subsection{General Motors}\hfill {\color{NavyBlue}January 2021 - August 2021\\ {\color{Black}\it Software Developer}\hfill Chandler, AZ}%
 \begin{itemize}
-	\itemsep0em
-	\item Bachelor of Science in Computer Science, 3.58 GPA
-	\item Provost's Honors
+\itemsep0em 
+	\item Worked in AngularJS/Java/SQL on an internal application that calculates backorder lead times for car parts
+	\item Implemented functionality that allows the application to process lead times for an entirely new part type
+	\item Helped re-architect the core logic of the application for better code reuse and faster run times
+	\item Made key UI and usability decisions on the front end (e.g. created a history table to keep track of user changes)
 \end{itemize}
 
-\vspace{-2em}
-\section{Experience}
-
-\vspace{-0.5em}
-\subsection{UserTesting - Independent Contractor}\quad{\it Mountain View, CA}\hfill {\color{Carmine}December 2019 - Present}
+\vspace{-1em} 
+\subsection{UserTesting}\hfill {\color{NavyBlue}December 2019 - Present\\ {\color{Black}\it Independent Contractor}\hfill Mountain View, CA}%
 \begin{itemize}
+\itemsep0em 
 	\item Applicant Screener
 \end{itemize}
 
 \vspace{-1em} 
-\subsection{Pactech - Software Engineer Intern}\quad{\it San Jose, CA}\hfill {\color{Carmine}June 2019 - September 2019}
+\subsection{Pactech}\hfill {\color{NavyBlue}June 2019 - September 2019\\ {\color{Black}\it Software Engineer Intern}\hfill San Jose, CA}%
 \begin{itemize}
 	\itemsep0em
-	\item Designed a mix-and-match cable parts web application using HTML, CSS, and Bootstrap
+	\item Designed a cable code generator using HTML/CSS/JavaScript; generates unique codes based on the selected components of the cable
 	\item Refactored company website's HTML codebase to remove 400+ lines of boilerplate code
 \end{itemize}
-\vspace{1.5em}
 
-\setlength{\columnsep}{1.5cm} 		% Separation between columns
-\columnratio{0.5} 			% Size of column
-\setlength{\columnseprule}{0.2pt} 	% Vertical bar
-\begin{paracol}{2} 			% Creates two columns of text
-
-\vspace{-2.5em}
+\vspace{-1em}
 \section{Projects}
+\vspace{-1.5em}
+\par\noindent\rule{\textwidth}{0.4pt}
 
 \vspace{-0.5em}
-\subsection{Zag's Boons (2020)} \hfill \vspace{0.2em}
-
-{\color{NavyBlue} React.js SPA for displaying build path 
-\\\indent options in Hades (PC game)}
-\begin{itemize}[leftmargin=*]
-	\itemsep0em 
-	\item Personal project built with the Gatsby framework
-	\item Utilizes GraphQL to query game data from self-made JSON file
+\subsection{Zag's Boons} \href{https://github.com/WKhiro/Zags_Boons}{\color{NavyBlue} github.com/WKhiro/Zags\_Boons}
+\begin{itemize}
+\vspace{-0.25em}
+	\itemsep0em
+	\item React Single Page Application that displays build path options in Hades (PC game)
+	\item Personal project; built on Gatsby framework and utilizes GraphQL to query in JSON game data
 \end{itemize}
 
-\vspace{-0.5em}
-\subsection{CineScope (2019)} \hfill \vspace{0.2em}
-
-{\color{NavyBlue} React.js web app for aggregating and comparing 
-\indent movie ratings and reviews}
-\begin{itemize}[leftmargin=*]
-	\itemsep0em 
-	\item Built with React.js, Node.js, and Firebase in team of ten under Agile development
-	\item Developed algorithms for querying data from open-source TMdb and OMdb APIs
+\vspace{-1em}
+\subsection{CineScope} \href{https://github.com/WKhiro/CineScope-Client}{\color{NavyBlue} github.com/WKhiro/CineScope-Client}
+\begin{itemize}
+\vspace{-0.25em}
+	\itemsep0em
+	\item React/Node.js web application for aggregating and comparing movie ratings and reviews
+	\item Created in team of ten under Agile development
 \end{itemize}
 
-\vspace{-0.5em}
-\subsection{Wyvern (2018)} \hfill \vspace{0.2em}
-
-{\color{NavyBlue} Mobile game app for Android devices}
-\begin{itemize}[leftmargin=*]
-	\itemsep0em 
-	\item Written in JavaScript using Phaser framework in team of three under Waterfall development
-	\item Ported over to Android Studio using 
-\\\indent Apache Cordova
+\vspace{-1em}
+\subsection{Wyvern} \href{https://github.com/WKhiro/Wyvern}{\color{NavyBlue} github.com/WKhiro/Wyvern}
+\begin{itemize}
+\vspace{-0.25em}
+	\itemsep0em
+	\item Mobile game application written in JavaScript and ported over to Android using Apache Cordova
+	\item Created in team of three under Waterfall development
 \end{itemize}
 
-\vspace{0.5em}
-{\noindent More projects and information available at \\
-\href{https://wkhiro.github.io/}{\color{NavyBlue} wkhiro.github.io}}
-
-\switchcolumn
-\vspace{-2.5em}
-\section{Skills}
+\vspace{-1em}
+\section{Technical Skills}
+\vspace{-1.5em}
+\par\noindent\rule{\textwidth}{0.4pt}
+Languages: Python, JavaScript, Java, SQL, HTML5, CSS3, Sass, GraphQL \newline
+Frameworks and Libraries: React, AngularJS, Node.js, Gatsby, Spring \newline
+Other Tools: Git, Maven, Azure DevOps Server, Unix, LaTeX
 
 \vspace{-0.5em}
-\subsection{Languages} \hfill \vspace{0.5em}
-	
-	Proficient: Python, JavaScript, HTML5/CSS3\\
-	\indent Familiar with: C++, Java, C, R
-\vspace{-0.5em}
-\subsection{Technologies} \hfill \vspace{0.5em}
-
-	React.js, Sass, Node.js, GraphQL, Gatsby, Linux, \\\indent LaTeX, Git, Firebase, OpenGL
-	
-\vspace{-0.5em}
-\subsection{Spoken Languages} \hfill \vspace{0.5em}
-
-	English (native), Cantonese (conversational)
-	
-\section{Relevant Coursework}
-\begin{enumerate}[leftmargin=0cm]
-	\item[] CSE 101: Algorithms
-	\item[] CSE 120: Operating Systems
-	\item[] CSE 127: Computer Security
-	\item[] CSE 150: Introduction to AI: Probabilistic\\Reasoning and Decision Making 
-	\item[] CSE 167: Computer Graphics
-	\item[] MATH 183: Statistical Methods
-\end{enumerate}
-
-\end{paracol}
+\section{Links}
+\vspace{-1.5em}	
+\par\noindent\rule{\textwidth}{0.4pt}
+{\faGithub} GitHub: {\color{NavyBlue} \href{https://github.com/WKhiro}{github.com/WKhiro}}\newline
+{\color{LinkedInBlue}\faLinkedinSquare} LinkedIn: {\color{NavyBlue} \href{https://www.linkedin.com/in/wesley-kok}{linkedin.com/in/wesley-kok}}\newline
+Personal Website: {\color{NavyBlue} \href{https://wkhiro.github.io}{wkhiro.github.io}}
 
 \end{document}
